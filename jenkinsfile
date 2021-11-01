@@ -1,0 +1,28 @@
+pipeline {
+    agent {
+      node {
+        label "master"
+      }  
+    }
+
+    stages {
+      stage('fetch_latest_code') {
+        steps {
+          git credentialsId: 'github', url: 'https://github.com/vigneshwaran29/sample'
+        }
+      }
+
+      stage('TF Init&Plan') {
+        steps {
+          sh 'terraform init'
+          sh 'terraform plan'
+        }      
+      }
+      
+      stage('TF Apply') {
+        steps {
+          sh 'terraform apply --auto-approve'
+        }
+      }
+    } 
+  }
