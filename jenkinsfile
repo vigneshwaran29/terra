@@ -8,7 +8,7 @@ pipeline {
     stages {
       stage('fetch_latest_code') {
         steps {
-          git credentialsId: 'github', url: 'https://github.com/vigneshwaran29/sample'
+          git credentialsId: 'github', url: 'https://github.com/vigneshwaran29/terra.git'
         }
       }
 
