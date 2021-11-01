@@ -127,7 +127,7 @@ resource "azurerm_linux_virtual_machine" "terraformvm" {
         publisher = "Canonical"
         offer     = "UbuntuServer"
         sku       = "16.04-LTS"
-        version   = "Gen1"
+        version   = "latest"
     }
 
     computer_name  = "myjekVM"
