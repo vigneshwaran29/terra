@@ -18,7 +18,7 @@ provider "azurerm" {
 
 
 resource "azurerm_resource_group" "jenkin" {
-    name     = "jenkinstest"
+    name     = "jenkinsci_cd"
     location = "eastus"
 
 }
